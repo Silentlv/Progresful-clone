@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progresful - Ražotnes Automatizācija</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigācija -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <span class="logo-icon">≡</span>
+                    <span class="logo-text">Progresful</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#produkts">Produkts</a></li>
+                    <li><a href="#cenas">Cenas</a></li>
+                </ul>
+                <a href="#demo" class="btn-demo">Pieteikties Demo</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Galvenā sekcija -->
+    <section class="hero">
+        <div class="container">
+            <h1>Automatizē savas ražotnes efektivitāti</h1>
+            <p class="subtitle">Pārej no papīriem un haosa uz pilnīgu pārredzamību, izmērāmu efektivitāti un tūlītēju atdevi</p>
+        </div>
+    </section>
+
+    <!-- Dashboard priekšskatījums -->
+    <section class="dashboard-preview">
+        <div class="container">
+            <div class="dashboard-mockup">
+                <div class="dashboard-header">
+                    <div class="dashboard-logo">PL</div>
+                    <div class="dashboard-nav">
+                        <a href="#" class="active">Uzdevumi</a>
+                        <a href="#">Sērijas</a>
+                        <a href="#">Tīrgi</a>
+                        <a href="#">Darbinieki</a>
+                        <a href="#">Kļūdas</a>
+                        <a href="#">Importēt</a>
+                        <a href="#">Ziņojumi</a>
+                    </div>
+                    <div class="dashboard-user">
+                        <span>Mani uzdevumi</span>
+                        <span>Admin</span>
+                        <span>🔔</span>
+                        <span>👤</span>
+                    </div>
+                </div>
+
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <h2>3701.7</h2>
+                        <p>Vienības</p>
+                    </div>
+                    <div class="stat-card">
+                        <h2>238h 18min</h2>
+                        <p>Iztērētais laiks</p>
+                    </div>
+                    <div class="stat-card">
+                        <h2>9</h2>
+                        <p>Kļūdas</p>
+                    </div>
+                    <div class="stat-card">
+                        <h2>2h 2min</h2>
+                        <p>Zaudētais laiks</p>
+                    </div>
+                    <div class="stat-card">
+                        <h2>36</h2>
+                        <p>Zaudētās vienības</p>
+                    </div>
+                </div>
+
+                <div class="dashboard-table">
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <strong>Evita Piparmētrite</strong>
+                            <small>17.11.25 11:43</small>
+                        </div>
+                        <div class="table-cell">P2566_zila / Modern montāža / Durvju rāmji / DR 1</div>
+                        <div class="table-cell">17.11.2025</div>
+                        <div class="table-cell">
+                            <div>0h 20min (0h 15min)</div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%"></div>
+                            </div>
+                            <small>75%</small>
+                        </div>
+                        <div class="table-cell">1 (2/2)</div>
+                        <div class="table-cell">-</div>
+                        <div class="table-cell">
+                            <button class="btn-approve">Apstiprināt</button>
+                        </div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <strong>Evita Piparmētrite</strong>
+                            <small>17.11.25 11:43</small>
+                        </div>
+                        <div class="table-cell">P2566_zila / Modern montāža / Durvju montāža / DV fur.iestrāde</div>
+                        <div class="table-cell">17.11.2025</div>
+                        <div class="table-cell">
+                            <div>0h 30min (0h 15min)</div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 50%"></div>
+                            </div>
+                            <small>50%</small>
+                        </div>
+                        <div class="table-cell">1 (3/3)</div>
+                        <div class="table-cell">-</div>
+                        <div class="table-cell">
+                            <button class="btn-approve">Apstiprināt</button>
+                        </div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <strong>Evita Piparmētrite</strong>
+                            <small>17.11.25 11:43</small>
+                        </div>
+                        <div class="table-cell">P2566_zila / Modern montāža / Durvju montāža / DMB 2</div>
+                        <div class="table-cell">17.11.2025</div>
+                        <div class="table-cell">
+                            <div>1h 0min (0h 40min)</div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 67%"></div>
+                            </div>
+                            <small>67%</small>
+                        </div>
+                        <div class="table-cell">1 (1/1)</div>
+                        <div class="table-cell">-</div>
+                        <div class="table-cell">
+                            <button class="btn-approve">Apstiprināt</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Procesu soļi -->
+    <section class="process-steps">
+        <div class="container">
+            <div class="steps-wrapper">
+                <div class="step-box">Importēt</div>
+                <div class="step-arrow">→</div>
+                <div class="step-box">Deleģēt</div>
+                <div class="step-arrow">→</div>
+                <div class="step-box">Apstiprināt vai noraidīt</div>
+                <div class="step-arrow">→</div>
+            <div class="step-box">Sekot progresam</div>
+            <div class="step-arrow">→</div>
+            <div class="step-box">Zaudējumi</div>
+            <div class="step-arrow">→</div>
+             <div class="step-box">Export</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galvenā īpašība -->
+    <section class="main-feature">
+        <div class="container">
+            <div class="feature-content">
+             <div class="feature-text">
+                    <h2>Darba reģistrācija, ne tikai laiks</h2>
+                    <p class="feature-intro">Darbinieks telefonā atzīmē, ko izdarījis. Vadība redz progresu uzreiz.</p>
+                    
+                    <h3>Kāpēc tas ir svarīgi</h3>
+                    <ul class="feature-list">
+                        <li>Redzi paveikto darbu, nevis tikai laiku.</li>
+                        <li>Klients saņem live-statusa linku. Viņš redz progresu bez telefona zvaniem vai e-pastiem.</li>
+                        <li>Viss strādā uz telefonā - nav nepieciešamas jaunas iekārtas vai programmatūras.</li>
+                    </ul>
+
+                    <h3>Rezultāts</h3>
+                    <p>Mazāk jautājumu. Mazāk gaidīšanas. Skaidrs progress katru brīdi.</p>
+            </div>
+                <div class="feature-image">
+                    <div class="image-placeholder">
+                        [Attēls: Darba reģistrācijas interfeiss]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Darbplūsma -->
+    <section class="workflow" id="produkts">
+        <div class="container">
+            <h2>Kā Progresful iederas tavā darbplūsmā</h2>
+            <p class="section-subtitle">Automatizē paveiktā darba uzskaiti un seko līdzi ražotnes veiktspējai reāllaikā.</p>
+            
+            <div class="workflow-grid">
+                <div class="workflow-card">
+                    <div class="card-icon">📋</div>
+                    <h4>Darba lapu automatizācija</h4>
+                    <p>Reģistrē paveiktos uzdevumus uzreiz, bez papīriem, bez kavējumiem, tikai reāllaika atskaites.</p>
+                </div>
+
+                <div class="workflow-card">
+                    <div class="card-icon">⚠️</div>
+                    <h4>Kļūdu uzskaite</h4>
+                    <p>Atklāj kļūdas brīdī, kad tās notiek, un sasaisti tās ar izmaksām un laiku.</p>
+                </div>
+
+                <div class="workflow-card">
+                    <div class="card-icon">📊</div>
+                    <h4>Progresu uzraudzība</h4>
+                    <p>Pārvaldi reāllaika progresu visos projektos, maiņās un komandās, vienā panelī.</p>
+                </div>
+
+                <div class="workflow-card">
+                    <div class="card-icon">⏱️</div>
+                    <h4>Normatīvu uzraudzība</h4>
+                    <p>Salīdzini darbinieku ātrumu ar normām un identificē labākos vai vājākos izpildītājus.</p>
+                </div>
+
+                <div class="workflow-card">
+                    <div class="card-icon">📥</div>
+                    <h4>Importa/Eksporta integrācija</h4>
+                    <p>Viegls savienojums ar Excel vai ERP sistēmām un ērts atskaišu eksports ar vienu klikšķi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ātrā ieviešana -->
+    <section class="quick-setup">
+        <div class="container">
+            <h2>Darbībā 2 dienu laikā</h2>
+            <p class="section-subtitle">Importē datus, konfigurē darbplūsmas un sāc strādāt nekavējoties, bez izmaiņām esošajos procesos.</p>
+            
+            <div class="setup-steps">
+                <div class="setup-card">
+                    <div class="setup-number">1</div>
+                    <h4>Importēt</h4>
+                    <p>Augšupielādē savus pašreizējos ražošanas vai darba procesus.</p>
+                </div>
+
+                <div class="setup-card">
+                    <div class="setup-number">2</div>
+                    <h4>Darbinieku piekļuve</h4>
+                    <p>Nosaki piekļuves un uzdevumus atbilstoši savai struktūrai.</p>
+                </div>
+
+                <div class="setup-card">
+                    <div class="setup-number">3</div>
+                    <h4>Reāllaika rezultāti</h4>
+                    <p>Vadi operācijas ar tūlītēju, reāllaika uzskaiti.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Atsauksme -->
+    <section class="testimonial">
+        <div class="container">
+            <h2>Progresful mums deva pilnīgu skaidrību par projektiem un kļūdu kontroli.</h2>
+            
+            <div class="quote-box">
+                <p class="quote-text">"Beidzot mums ir pilna pārredzamība par projekta gaitu, paveiktajiem darbiem, pieļauto kļūdu zaudējumu aprēķiniem, un normatīvu izpildei. Progresful aizstāja papīra laika lapas ar reāliem datiem un tūlītēju skaidrību."</p>
+            </div>
+
+            <div class="comparison-grid">
+                <div class="comparison-column">
+                    <h3>Pēc Progresful</h3>
+                    <div class="comparison-item">
+                        <h4>Dzīvs progress</h4>
+                        <p>digitāla automatizācija, bez papīriem.</p>
+                    </div>
+                    <div class="comparison-item">
+                        <h4>Darba pārskats</h4>
+                        <p>pilna pārredzamība par darbu, izmaksām un veiktspēju.</p>
+                    </div>
+                    <div class="comparison-item">
+                        <h4>Ērtas atskaites</h4>
+                        <p>precīzas atskaites tiek ģenerētas automātiski.</p>
+                    </div>
+                    <div class="comparison-item">
+                        <h4>Kļūdu aprēķins</h4>
+                        <p>pilna kontrole un izmērāmi ietaupījumi laikā un izmaksās.</p>
+                    </div>
+                </div>
+
+                <div class="comparison-column before">
+                    <h3>Pirms Progresful</h3>
+                    <div class="comparison-item">
+                        <h4>Papīra lapas</h4>
+                        <p>manuāla datu vākšana un apstrāde.</p>
+                    </div>
+                    <div class="comparison-item">
+                        <h4>Nav skaidrības</h4>
+                        <p>grūti sekot līdzi projektiem reāllaikā.</p>
+                    </div>
+                    <div class="comparison-item">
+                        <h4>Lēnas atskaites</h4>
+                        <p>daudz laika nepieciešams datu apkopošanai.</p>
+                    </div>
+                    <div class="comparison-item">
+                        <h4>Nezināmi zaudējumi</h4>
+                        <p>grūti aprēķināt kļūdu izmaksas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cenu plāni -->
+    <section class="pricing" id="cenas">
+        <div class="container">
+            <h2>Izmaksas</h2>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Bezmaksas</h3>
+                    <p class="pricing-desc">Individuāliem profesionāļiem. Ierobežots līdz vienam lietotājam.</p>
+                    <div class="price">Bezmaksas</div>
+                    
+                    <ul class="pricing-features">
+                        <li>✓ Pielāgots imports</li>
+                        <li>✓ 1 lietotājs</li>
+                        <li>✓ Visi rīki</li>
+                        <li>✓ Darbplūsmas veidne</li>
+                        <li>✓ Datu eksports</li>
+                        <li>✓ Pamatatbalsts</li>
+                    </ul>
+                    
+                    <a href="#demo" class="btn-pricing">Saņemt Pieteikumu</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Populārs</div>
+                    <h3>Uzņēmumiem</h3>
+                    <p class="pricing-desc">Līdz 20 lietotājiem. Piemērots augošiem uzņēmumiem, kas vēlas uzlabot efektivitāti.</p>
+                    <div class="price">€490<span>/m</span></div>
+                    
+                    <ul class="pricing-features">
+                        <li>✓ Pielāgots imports</li>
+                        <li>✓ Līdz 20 lietotājiem</li>
+                        <li>✓ Visi rīki</li>
+                        <li>✓ Darbplūsmas veidne</li>
+                        <li>✓ Datu eksports</li>
+                        <li>✓ Prioritārais atbalsts</li>
+                    </ul>
+                    
+                    <a href="#demo" class="btn-pricing primary">Saņemt Pieteikumu</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <p class="pricing-desc">Uzņēmumiem ar vairāk nekā 20 darbiniekiem.</p>
+                    <div class="price">Pro</div>
+                    
+                    <ul class="pricing-features">
+                        <li>✓ Viss, kas iekļauts Pro versijā</li>
+                        <li>✓ Neierobežots lietotāju skaits</li>
+                        <li>✓ Pilns funkciju komplekts</li>
+                        <li>✓ Vairāku veidņu darbplūsmas</li>
+                        <li>✓ Veiktspējas analītika un ieskati</li>
+                        <li>✓ Prioritārais atbalsts un SLA</li>
+                        <li>✓ White Label</li>
+                    </ul>
+                    
+                    <a href="#demo" class="btn-pricing">Saņemt Pieteikumu</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2>FAQ</h2>
+            <p class="section-subtitle">Biežāk uzdotie jautājumi</p>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h5>1. Cik ātri mēs varam sākt izmantot Progresful savā ražotnē?</h5>
+                </div>
+                <div class="faq-item">
+                    <h5>2. Vai varam importēt esošos projektus vai maiņu datus no Excel vai citām sistēmām?</h5>
+                </div>
+                <div class="faq-item">
+                    <h5>3. Vai Progresful der tikai lielām ražotnēm, vai arī mazām komandām?</h5>
+                </div>
+                <div class="faq-item">
+                    <h5>4. Kā Progresful palīdz ietaupīt laiku un naudu katru nedēļu?</h5>
+                </div>
+                <div class="faq-item">
+                    <h5>5. Kādas kļūdas sistēma uzskaita un kā tas notiek?</h5>
+                </div>
+                <div class="faq-item">
+                    <h5>6. Vai rūpnīcas darbiniekiem nepieciešama apmācība, lai izmantotu Progresful?</h5>
+                </div>
+                <div class="faq-item">
+                    <h5>7. Vai saņemsim atbalstu ieviešanas un uzsākšanas laikā?</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pieredze -->
+    <section class="experience">
+        <div class="container">
+            <h2>15+ Gadu Pieredze</h2>
+            <p>Mums ir vairāk nekā 15 gadu pieredze IT produktu izstrādē, un procesu automatizācijā.</p>
+            <p>Esam attīstījuši risinājumus Latvijas lielākajiem uzņēmumiem.</p>
+            <p>Mēs zinām, kā izveidot stabilus un uzticamus rīkus, kurus komandas var lietot katru dienu bez liekas sarežģītības.</p>
+        </div>
+    </section>
+
+    <!-- Noslēguma CTA -->
+    <section class="final-cta" id="demo">
+        <div class="container">
+            <h2>Vēlies redzēt savus ietaupījumus?</h2>
+            <p>Piesakies demonstrācijas un uzzini, kā Progresful spēj uzlabot tavu ražošanas procesu mazāk nekā 30 minūtēs.</p>
+            <a href="#" class="btn-cta">Pieteikties</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">≡</span>
+                    <span class="logo-text">Progresful</span>
+                </div>
+                <p>Uzlabo savas ražotnes efektivitāti un pārvaldi visus tās aspektus reāllaikā</p>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Iespējas</h4>
+                    <a href="#produkts">Produkts</a>
+                    <a href="#cenas">Cenas</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© SIA Vidyly 2025. Visas tiesības aizsargātas</p>
+                <div class="footer-contact">
+                    <a href="mailto:hello@progresful.com">hello@progresful.com</a>
+                    <a href="tel:+37126240600">+371 26240600</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
