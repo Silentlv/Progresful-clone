@@ -1,0 +1,919 @@
+
+/* Pamata stili un reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigācija */
+header {
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: box-shadow 0.3s;
+}
+
+.navbar {
+    padding: 20px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.logo-icon {
+    font-size: 28px;
+}
+
+/* BURGER POGAS STILI */
+.burger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.burger span {
+    width: 25px;
+    height: 3px;
+    background: #1a1a1a;
+    display: block;
+    margin: 5px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+/* Burger animācija - X forma */
+.burger--active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.burger--active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger--active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* NAV MENU STILI */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #666;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #7c3aed;
+}
+
+/* MOBĪLĀ IZVĒLNE - ATVĒRTA */
+.nav--open {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.nav--open li {
+    margin: 10px 0;
+}
+
+.nav--open a {
+    font-size: 18px;
+    padding: 10px 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-demo {
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s;
+}
+
+.btn-demo:hover {
+    transform: translateY(-2px);
+}
+
+/* Header ēna ritināšanas laikā */
+.header--scrolled {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Hero sekcija */
+.hero {
+    background: linear-gradient(to bottom, #f0f0f0 0%, #e8e8e8 100%);
+    text-align: center;
+    padding: 80px 20px 60px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Dashboard mockup */
+.dashboard-preview {
+    padding: 40px 20px 80px;
+    background: linear-gradient(to bottom, #e8e8e8 0%, #ffffff 100%);
+}
+
+.dashboard-mockup {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    overflow: hidden;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.dashboard-header {
+    background: #7c3aed;
+    color: white;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-logo {
+    background: white;
+    color: #7c3aed;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.dashboard-nav {
+    display: flex;
+    gap: 25px;
+}
+
+.dashboard-nav a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.dashboard-nav a.active {
+    color: white;
+    border-bottom-color: white;
+}
+
+.dashboard-user {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 14px;
+}
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 30px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.stat-card h2 {
+    font-size: 32px;
+    color: #1a1a1a;
+    margin-bottom: 5px;
+}
+
+.stat-card p {
+    font-size: 13px;
+    color: #999;
+}
+
+.dashboard-table {
+    padding: 25px;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1fr 1.5fr 0.8fr 0.5fr 1fr;
+    gap: 15px;
+    padding: 20px;
+    border-bottom: 1px solid #f0f0f0;
+    align-items: center;
+    font-size: 14px;
+}
+
+.table-cell strong {
+    display: block;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.table-cell small {
+    font-size: 12px;
+    color: #999;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #e5e5e5;
+    border-radius: 3px;
+    margin: 5px 0;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #7c3aed, #a855f7);
+    border-radius: 3px;
+}
+
+.btn-approve {
+    background: #7c3aed;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+/* Procesu soļi */
+.process-steps {
+    background: white;
+    padding: 60px 20px;
+}
+
+.steps-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.step-box {
+    background: #f8f8f8;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-weight: 500;
+    color: #1a1a1a;
+    border: 2px solid #e5e5e5;
+}
+
+.step-arrow {
+    color: #7c3aed;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Galvenā īpašība */
+.main-feature {
+    padding: 80px 20px;
+    background: #ffffff;
+}
+
+.feature-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.feature-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.feature-intro {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.feature-text h3 {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #7c3aed;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    padding: 10px 0 10px 30px;
+    position: relative;
+    color: #444;
+}
+
+.feature-list li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #7c3aed;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.image-placeholder {
+    background: #f0f0f0;
+    height: 450px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 14px;
+}
+
+/* Darbplūsma */
+.workflow {
+    padding: 80px 20px;
+    background: #f8f8f8;
+}
+
+.workflow h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.workflow-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.workflow-card {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.workflow-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.workflow-card h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.workflow-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Ātrā ieviešana */
+.quick-setup {
+    padding: 80px 20px;
+    background: white;
+}
+
+.quick-setup h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.setup-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.setup-card {
+    text-align: center;
+    padding: 30px;
+}
+
+.setup-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 auto 20px;
+}
+
+.setup-card h4 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.setup-card p {
+    color: #666;
+}
+
+/* Atsauksme */
+.testimonial {
+    padding: 80px 20px;
+    background: #f8f8f8;
+}
+
+.testimonial h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quote-box {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    margin-bottom: 50px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.quote-text {
+    font-size: 18px;
+    font-style: italic;
+    color: #444;
+    line-height: 1.8;
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.comparison-column h3 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.comparison-item {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.comparison-item h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #1a1a1a;
+}
+
+.comparison-item p {
+    color: #666;
+    font-size: 14px;
+}
+
+.before .comparison-item {
+    background: #fafafa;
+}
+
+/* Cenu plāni */
+.pricing {
+    padding: 80px 20px;
+    background: white;
+}
+
+.pricing h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 60px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    background: #f8f8f8;
+    padding: 40px 30px;
+    border-radius: 12px;
+    position: relative;
+    border: 2px solid transparent;
+    transition: transform 0.3s;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+}
+
+.pricing-card.featured {
+    background: white;
+    border-color: #7c3aed;
+    box-shadow: 0 10px 40px rgba(124,58,237,0.15);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -12px;
+    right: 30px;
+    background: #7c3aed;
+    color: white;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.pricing-card h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+.pricing-desc {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+    min-height: 40px;
+}
+
+.price {
+    font-size: 42px;
+    font-weight: 700;
+    color: #7c3aed;
+    margin-bottom: 30px;
+}
+
+.price span {
+    font-size: 18px;
+    color: #999;
+}
+
+.pricing-features {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.pricing-features li {
+    padding: 12px 0;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 14px;
+    color: #444;
+}
+
+.btn-pricing {
+    display: block;
+    text-align: center;
+    background: #e5e5e5;
+    color: #1a1a1a;
+    padding: 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-pricing:hover {
+    background: #d5d5d5;
+}
+
+.btn-pricing.primary {
+    background: linear-gradient(135deg, #7c3aed, #a855f7);
+    color: white;
+}
+
+.btn-pricing.primary:hover {
+    background: linear-gradient(135deg, #6d28d9, #9333ea);
+}
+
+/* FAQ */
+.faq {
+    padding: 80px 20px;
+    background: #f8f8f8;
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.faq-list {
+    max-width: 900px;
+    margin: 40px auto 0;
+}
+
+.faq-item {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.faq-item h5 {
+    font-size: 16px;
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+/* Pieredze */
+.experience {
+    padding: 80px 20px;
+    background: white;
+    text-align: center;
+}
+
+.experience h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+}
+
+.experience p {
+    font-size: 18px;
+    color: #666;
+    max-width: 800px;
+    margin: 15px auto;
+    line-height: 1.8;
+}
+
+/* Noslēguma CTA */
+.final-cta {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+    color: white;
+    text-align: center;
+}
+
+.final-cta h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.final-cta p {
+    font-size: 18px;
+    margin-bottom: 35px;
+    opacity: 0.95;
+}
+
+.btn-cta {
+    display: inline-block;
+    background: white;
+    color: #7c3aed;
+    padding: 16px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    transition: transform 0.2s;
+}
+
+.btn-cta:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: #1a1a1a;
+    color: white;
+    padding: 60px 20px 30px;
+}
+
+.footer-content {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.footer-content p {
+    color: #999;
+    max-width: 600px;
+    margin: 15px auto;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+.footer-column h4 {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.footer-column a {
+    display: block;
+    color: #999;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom p {
+    color: #666;
+    font-size: 14px;
+}
+
+.footer-contact {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-contact a {
+    color: #999;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-contact a:hover {
+    color: white;
+}
+
+/* RESPONSIVE DIZAINS */
+@media (max-width: 1024px) {
+    .dashboard-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .table-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Hero sekcija */
+    .hero h1 {
+        font-size: 32px;
+    }
+    
+    /* Navigācija */
+    .navbar .container {
+        flex-wrap: wrap;
+    }
+    
+    .burger {
+        display: block;
+        order: 1;
+    }
+    
+    .nav-menu {
+        display: none;
+        order: 3;
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    .btn-demo {
+        order: 2;
+    }
+    
+    /* Pārējais */
+    .feature-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .setup-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .comparison-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .dashboard-nav {
+        display: none;
+    }
+}
